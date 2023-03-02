@@ -2,6 +2,7 @@
   --text-main-color: #434455;
   --dark-bg-a-title: #2e2f42;
   --active-state-elem: #404bbf;
+  --active-elem-color: #4d5ae5;
   --main-white-bg: #ffffff;
   --secondary-light-color-bg-text: #f4f4fd;
   --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -111,7 +112,7 @@ button {
   font-size: 18px;
   line-height: 1.33;
   letter-spacing: 0.03em;
-  color: #4d5ae5;
+  color: var(--active-elem-color);
   text-transform: uppercase;
   text-decoration: none;
 
@@ -211,7 +212,7 @@ button {
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: var(--main-white-bg);
-  background: #4d5ae5;
+  background: var(--active-elem-color);
 
   border: 0;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -322,7 +323,7 @@ button {
 
 .team-social-link {
   display: flex;
-  background-color: #4d5ae5;
+  background-color: var(--active-elem-color);
   border-radius: 50%;
   width: 100%;
   height: 100%;
@@ -461,7 +462,9 @@ button {
 
   padding: 8px 16px;
 
-  border: none;
+  height: 40px;
+  width: 264px;
+
   outline: none;
 
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -488,10 +491,8 @@ button {
 
   padding: 8px 24px;
 
-  height: 40px;
-
   border: none;
-  background-color: #4d5ae5;
+  background-color: var(--active-elem-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 
@@ -503,8 +504,9 @@ button {
   transition: background-color var(--transition);
 }
 
-.footer-btn-subscribe:focus {
-  background-color: #404bbf;
+.footer-btn-subscribe:focus,
+.footer-btn-subscribe:hover {
+  background-color: var(--active-state-elem);
 }
 
 /* portfolio */
@@ -525,7 +527,7 @@ button {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  color: #4d5ae5;
+  color: var(--active-elem-color);
   background-color: var(--secondary-light-color-bg-text);
   border: 1px solid #e7e9fc;
   border-radius: 4px;
@@ -596,7 +598,7 @@ button {
   width: 100%;
   height: 100%;
   color: var(--secondary-light-color-bg-text);
-  background-color: #4d5ae5;
+  background-color: var(--active-elem-color);
   padding: 40px 32px;
 
   overflow: auto;
@@ -667,12 +669,11 @@ button {
 .modal-form {
   display: flex;
   flex-direction: column;
+  gap: 8px;
 }
 
 .modal-form-label {
   display: block;
-
-  margin-bottom: 8px;
 
   font-size: 12px;
   line-height: 1.17;
@@ -716,11 +717,11 @@ button {
 }
 
 .modal-form-input:focus + .modal-form-input-icon {
-  fill: #4d5ae5;
+  fill: var(--active-elem-color);
 }
 
 .modal-form-input:focus {
-  border-color: #4d5ae5;
+  border-color: var(--active-elem-color);
 }
 
 .modal-form-comment {
@@ -751,7 +752,7 @@ button {
 }
 
 .modal-form-comment:focus {
-  border-color: #4d5ae5;
+  border-color: var(--active-elem-color);
 }
 
 .modal-form-label-checkbox {
@@ -765,7 +766,7 @@ button {
 }
 
 .text-privacy-police {
-  color: #4d5ae5;
+  color: var(--active-elem-color);
 }
 
 .modal-form-icon-checkbox {
@@ -779,10 +780,12 @@ button {
 
   width: 16px;
   height: 16px;
-  border: 1.25px solid #2e2f42;
+  border: 1.25px solid var(--dark-bg-a-title);
   border-radius: 2px;
 
   fill: none;
+
+  cursor: pointer;
 
   transition: fill var(--transition), background-color var(--transition),
     border var(--transition);
@@ -790,7 +793,7 @@ button {
 
 .modal-form-input-checkbox:checked ~ .modal-form-icon-checkbox {
   background-color: var(--active-state-elem);
-  border: 1.25px solid #404bbf;
+  border: 1.25px solid var(--active-state-elem);
   fill: #f4f4fd;
 }
 
@@ -804,7 +807,7 @@ button {
   border: none;
   outline: none;
 
-  background-color: #4d5ae5;
+  background-color: var(--active-elem-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 
@@ -817,8 +820,9 @@ button {
   transition: background-color var(--transition);
 }
 
-.modal-form-submit:focus {
-  background-color: #404bbf;
+.modal-form-submit:focus,
+.modal-form-submit:hover {
+  background-color: var(--active-state-elem);
 }
 
 .close-modal-btn {
