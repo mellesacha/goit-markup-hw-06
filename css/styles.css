@@ -641,6 +641,9 @@ button {
   top: 50%;
   left: 50%;
 
+  min-width: 408px;
+  min-height: 584px;
+
   padding: 72px 24px 24px 24px;
 
   background-color: #fcfcfc;
@@ -669,11 +672,12 @@ button {
 .modal-form {
   display: flex;
   flex-direction: column;
-  gap: 8px;
 }
 
 .modal-form-label {
   display: block;
+
+  margin-bottom: 8px;
 
   font-size: 12px;
   line-height: 1.17;
