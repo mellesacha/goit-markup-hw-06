@@ -728,6 +728,17 @@ button {
   border-color: var(--active-elem-color);
 }
 
+.modal-form-label-textarea {
+  display: block;
+
+  margin-bottom: 16px;
+
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+}
+
 .modal-form-comment {
   width: 100%;
   height: 138px;
@@ -743,7 +754,6 @@ button {
   padding: 8px 16px;
 
   margin-top: 4px;
-  margin-bottom: 16px;
 
   transition: border-color var(--transition);
 }
